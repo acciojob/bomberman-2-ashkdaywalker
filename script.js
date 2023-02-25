@@ -1,4 +1,3 @@
-//your code here
 let board = document.querySelector('.grid-container')
 
 for (let i = 0; i < 100; i++) {
@@ -10,23 +9,6 @@ for (let i = 0; i < 100; i++) {
     boardCell.innerText = i
     board.appendChild(boardCell)
 }
-
-
-//=========adding bombs=============//
-// let noOfMines = 10;
-// let bombIds = new Set();
-
-// while (bombIds.size < 10) {
-//   let randomId = Math.round(Math.random() * 79);
-//   bombIds.add(randomId + 10);
-// }
-
-// bombIds.forEach(id => {
-//   let bombDiv = document.getElementById(id);
-//   bombDiv.classList.remove('valid');
-//   bombDiv.classList.add('bomb');
-//   bombDiv.style.backgroundColor = 'red';
-// });
 
 let bombIds = [];
 while (bombIds.length < 10) {
@@ -231,7 +213,6 @@ for (let i = 0; i < bombIds.length; i++) {
     }
 }
 
-//============revelaing boxes===============//
 
 let boardDivs = document.querySelectorAll('.grid-item')
 boardDivs.forEach(boardCell => {
@@ -252,7 +233,6 @@ function revealingDivs(e) {
         clickedCell.style.opacity = '0.6'
         clickedCell.classList.add('checked')
 
-        //====displaying the number of bobms==//
         if (!clickedCell.classList.contains('bomb')) {
             let bombCount = 0;
             console.log("first after declaration", bombCount);
